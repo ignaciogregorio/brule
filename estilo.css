@@ -43,7 +43,7 @@ header .header__aviso {
 }
 
 .main__fondo {
-  background-image: url(img/portada.jpg);
+  background-image: url(./img/portada.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
