@@ -42,7 +42,7 @@ header .header__aviso {
 }
 
 .main__fondo {
-  background-image: url(./Img/portada.jpg);
+  background-image: url(./Img/macaronsfondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -68,12 +68,7 @@ header .header__aviso {
 }
 
 .main__fondo p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
 }
@@ -161,6 +156,7 @@ header .header__aviso {
 
 .seccion__principal .seccion2 .overlay .text {
   color: white;
+  text-decoration: none;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -168,6 +164,10 @@ header .header__aviso {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.seccion__principal .seccion2 .overlay .text:hover {
+  color: black;
 }
 
 .seccion__principal .seccion2:hover .overlay {
@@ -180,32 +180,82 @@ header .header__aviso {
 
 .seccion3 .seccion3__titulo {
   text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
   font-size: 50px;
 }
 
-.seccion3 .seccion3__nosotros {
+.seccion3 .seccion3__subtitulo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.seccion3 .tarjeta__aboutme .flip__frente {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.seccion3 .seccion3__parrafo {
+.seccion3 .tarjeta__aboutme .foto__aboutme {
+  width: 300px;
+}
+
+.seccion3 .tarjeta__aboutme .flip__dorso {
   font-size: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  margin-top: 20px;
 }
 
-.seccion3 .seccion3__img {
-  width: 400px;
-  opacity: 0.8;
-}
-
-@media screen and (max-width: 540px) {
-  .seccion3 .seccion3__titulo {
-    font-size: 30px;
+@media screen and (min-width: 570px) {
+  .tarjeta__aboutme {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .tarjeta__aboutme .flip__aboutme {
+    background-color: transparent;
+    width: 400px;
+    height: 500px;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+  .tarjeta__aboutme .flip-box-inner {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    -webkit-transition: -webkit-transform 1.5s;
+    transition: -webkit-transform 1.5s;
+    transition: transform 1.5s;
+    transition: transform 1.5s, -webkit-transform 1.5s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  .tarjeta__aboutme .flip__aboutme:hover .flip-box-inner {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  .tarjeta__aboutme .flip__frente, .tarjeta__aboutme .flip__dorso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .tarjeta__aboutme .flip__frente .foto__aboutme {
+    width: 400px;
+    height: 500px;
+  }
+  .tarjeta__aboutme .flip__dorso {
+    background-color: lightsalmon;
+    color: white;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
   }
 }
 
@@ -241,12 +291,14 @@ header .header__aviso {
 }
 
 .seccion4 .seccion4__boton .btn {
-  background-color: salmon;
+  border: 3px solid salmon;
   font-weight: bolder;
+  color: black;
 }
 
 .seccion4 .seccion4__boton .btn:hover {
   color: white;
+  background-color: salmon;
 }
 
 @media screen and (max-width: 570px) {
