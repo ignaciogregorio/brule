@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/Img/Logo1.jpg">
 </head>
 <body>
   <header>
@@ -62,21 +63,28 @@
   <h1 class="titulo__presupuesto">PRESUPUESTO</h1>
 
   <div class="fondo__presupuesto">
+    <h3>Completá tus datos y los detalles de tu torta Decorada, asi podemos armarte un presupuesto</h3>
+    
     <form class="container formulario__presupuesto">
       <div class="row form__datos">
-        <div class="col-4">
-          <label class="form-label" for="nombre">Nombre</label>
-          <input class="form-control" type="text" name="nombre" id="">
+        <div class="col-6">
+          <input class="form-control" type="text" name="nombre" required placeholder="Nombre" id="">
           </div>
-        <div class="col-4">
-          <label class="form-label" for="apellido">Apellido</label>
-          <input class="form-control" type="text" name="apellido" id="">
+        <div class="col-6">
+          <input class="form-control" type="text" name="apellido" required placeholder="Apellido" id="">
         </div>
       </div>
       <div class="row form__email">
-        <div class="col-8">
-          <label class="form-label" for="name">Email</label>
-          <input class="form-control" type="email" name="email" id="">
+        <div class="col-12">
+          <input class="form-control" type="email" name="email" required placeholder="E-mail" id="">
+        </div>
+      </div>
+      <div class="row form__evento">
+        <div class="col-6">
+          <input class="form-control" type="number" name="cantidad de personas" required placeholder="cantidad de personas" id="">
+        </div>
+        <div class="col-6">
+          <input class="form-control" type="date" name="fecha evento" required placeholder="fecha del evento" id="">
         </div>
       </div>
       <div class="row form__torta">
@@ -111,6 +119,21 @@
           <label class="form-check-label" for="flexSwitchCheckDefault">Buttercream</label>
         </div>
       </div>
+      <div class="form__ejemplo">
+        <p>Podes adjuntar una imagen a modo de referencia:</p>
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" id="inputGroupFile02">
+          <label class="input-group-text" for="inputGroupFile02">Cargar</label>
+        </div>
+      </div>
+      <div class="form__comentario form-floating">
+        <textarea class="form-control" placeholder="Deja tu comentario aqui" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Escribí cualquier comentario adicional que tengamos que saber!</label>
+      </div>
+      <div class="form__boton d-grid gap-2">
+        <button class="btn" type="submit">Presupuestar</button>
+      </div>
+      
   
     </form>
 

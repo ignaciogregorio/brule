@@ -257,7 +257,7 @@ header{
 
 .seccion4{
     margin-top: 50px;
-    background-color: rgba(243, 121, 108, 0.302);
+    background-color: $color1;
     
     .seccion4__titulo{
         font-size: $font-size3;
@@ -268,13 +268,21 @@ header{
   
     }
     .seccion4__comentario{
-        margin-bottom: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .seccion4__datos{
         margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+    .seccion4__email{
+        margin-top: 10px;
+        margin-bottom: 10px;
 
     }
     .seccion4__boton{
+        margin-top: 10px;
         margin-bottom: 10px;
         .btn{
             border: 3px solid $color2;
@@ -302,10 +310,10 @@ header{
 }
 
 footer{
-    background-color: rgb(161, 151, 145);
+    background-color: rgba(180, 178, 178, 0.652);
 
     .footer__horarios{
-        color: $color3;
+        color: $color4;
         text-align: center;
         .footer__imagen{
             width: 25px;
@@ -350,12 +358,12 @@ footer h6{
             justify-content: center;
             .btn{
                 margin-top: 10px;
-            
                 background-color: $color1;
                 font-size: $font-size1;
             }
             .btn:hover{
                 color:white;
+                
             }
         }
     }
@@ -376,6 +384,7 @@ footer h6{
 }
 .fondo__presupuesto{
     background-color: $color1;
+    padding: 30px;
     
 
 }
@@ -383,15 +392,45 @@ footer h6{
     $margin:20px;
     margin-top: $margin*2;
 
+    .form__datos{
+        margin-bottom: $margin;
+    }
+
     .form__email{
-        margin-top: $margin/2;
+        @extend .form__datos
+    }
+    .form__evento{
+        @extend .form__datos
     }
     .form__torta{
-        margin-top: $margin;
-        font-size: $font-size1;
+        @extend .form__datos
+        
     }
-    .form__relleno{
-        @extend .form__torta
+    .form__biscochuelo{
+        @extend .form__datos
+    }
+    .form__rellenos{
+        @extend .form__datos
+    }
+    .form__ejemplo{
+        @extend .form__datos
+
+    }
+    .form__comentario{
+        @extend .form__datos
+    }
+    .form__boton{
+        @extend .form__datos;
+        .btn{
+            border: 3px solid $color2;
+            color: $color4;
+            
+        }
+        .btn:hover{
+            color:$color3;
+            background-color: $color2;
+            
+        }
     }
 
 }

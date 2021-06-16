@@ -261,7 +261,7 @@ header .header__aviso {
 
 .seccion4 {
   margin-top: 50px;
-  background-color: rgba(243, 121, 108, 0.302);
+  background-color: lightsalmon;
 }
 
 .seccion4 .seccion4__titulo {
@@ -279,14 +279,22 @@ header .header__aviso {
 }
 
 .seccion4 .seccion4__comentario {
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .seccion4 .seccion4__datos {
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.seccion4 .seccion4__email {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .seccion4 .seccion4__boton {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -310,11 +318,11 @@ header .header__aviso {
 }
 
 footer {
-  background-color: #a19791;
+  background-color: rgba(180, 178, 178, 0.652);
 }
 
 footer .footer__horarios {
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -390,18 +398,24 @@ footer h6 {
 /* inicio presupuesto */
 .fondo__presupuesto {
   background-color: lightsalmon;
+  padding: 30px;
 }
 
 .formulario__presupuesto {
   margin-top: 40px;
 }
 
-.formulario__presupuesto .form__email {
-  margin-top: 10px;
+.formulario__presupuesto .form__datos, .formulario__presupuesto .form__email, .formulario__presupuesto .form__evento, .formulario__presupuesto .form__torta, .formulario__presupuesto .form__biscochuelo, .formulario__presupuesto .form__rellenos, .formulario__presupuesto .form__ejemplo, .formulario__presupuesto .form__comentario, .formulario__presupuesto .form__boton {
+  margin-bottom: 20px;
 }
 
-.formulario__presupuesto .form__torta, .formulario__presupuesto .form__relleno {
-  margin-top: 20px;
-  font-size: 15px;
+.formulario__presupuesto .form__boton .btn {
+  border: 3px solid salmon;
+  color: black;
+}
+
+.formulario__presupuesto .form__boton .btn:hover {
+  color: white;
+  background-color: salmon;
 }
 /*# sourceMappingURL=estilo.css.map */
